@@ -1,0 +1,13 @@
+# Eclipse config
+.project
+.classpath
+.settings/
+
+# Build folders
+build/
+target/
+
+# Log/temp files
+*.log
+*.tmp
+*.temp

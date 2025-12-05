@@ -1,0 +1,199 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(90, 187, 194);
+  color: #333;
+}
+
+h2 {
+  padding-left: 50px;
+  margin: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  background: #2bd81b;
+  padding: 0.8rem 5%;
+  border-bottom: 2px solid #117543;
+}
+
+nav .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  color: #050505;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Links */
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navlinks li a {
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.3rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navlinks li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #3498db;
+  transition: 0.3s;
+}
+
+.navlinks li a:hover {
+  color: #000000;
+}
+
+.navlinks li a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2bd81b;
+  min-width: 150px;
+  border: 1px solid #117543;
+  border-radius: 5px;
+  list-style: none;
+  padding: 0.5rem 0;
+  z-index: 100;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: #117543;
+  color: #fff;
+}
+
+/* Correct hover rule */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.general-form {
+  width: 350px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.general-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.general-form input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.general-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #2b7cff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.general-form input[type="submit"]:hover {
+  background: #1f63cc;
+}
+
+/* Fixed Table Styles */
+.general-table {
+  width: 90%;
+  margin: 20px auto;
+  overflow-x: auto; /* For responsive scrolling if needed */
+}
+
+.general-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff; /* Added white background */
+}
+
+.general-table th,
+.general-table td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.general-table th {
+  background-color: #2b7cff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.general-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.general-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+.general-table td a {
+  color: #2b7cff;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 2px;
+}
+
+.general-table td a:hover {
+  text-decoration: underline;
+}
