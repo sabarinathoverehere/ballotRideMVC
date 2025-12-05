@@ -21,11 +21,11 @@
 		<div class="nav-container">
 			<a href="#" class="logo">BallotRide</a>
 			<ul class="navlinks">
-				<li><a href="#">Home</a></li>
+				<li><a href="${pageContext.request.contextPath}/owner/ownerHome.jsp">Home</a></li>
 				<li class="dropdown"><a href="#">Vehicle</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Add</a></li>
-						<li><a href="#">Edit</a></li>
+						<li><a href="${pageContext.request.contextPath}/owner/ownerVehicleAdd.jsp">Add</a></li>
+						<li><a href="${pageContext.request.contextPath}/owner/ownerVehicleEdit.jsp">Edit</a></li>
 						<li><a href="#">Delete</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="#">Drivers</a>

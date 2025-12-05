@@ -21,7 +21,7 @@
 		<div class="nav-container">
 			<a href="#" class="logo">BallotRide</a>
 			<ul class="navlinks">
-				<li><a href="#">Home</a></li>
+				<li><a href="${pageContext.request.contextPath}/admin/adminHome.jsp">Home</a></li>
 				<li><a href="#">Vehicle</a></li>
 				<li class="dropdown"><a href="#">Settings</a>
 					<ul class="dropdown-menu">
