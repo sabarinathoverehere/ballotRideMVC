@@ -22,7 +22,7 @@
 			<a href="#" class="logo">BallotRide</a>
 			<ul class="navlinks">
 				<li><a href="${pageContext.request.contextPath}/owner/ownerHome.jsp">Home</a></li>
-				<li class="dropdown"><a href="#">Vehicle</a>
+				<li class="dropdown"><a href="${pageContext.request.contextPath}/readVehicles">Vehicle</a>
 					<ul class="dropdown-menu">
 						<li><a href="${pageContext.request.contextPath}/owner/ownerVehicleAdd.jsp">Add</a></li>
 						<li><a href="${pageContext.request.contextPath}/owner/ownerVehicleEdit.jsp">Edit</a></li>
