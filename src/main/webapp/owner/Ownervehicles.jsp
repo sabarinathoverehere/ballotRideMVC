@@ -3,11 +3,6 @@
 <%@ include file="ownerHeader.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<c:forEach var="vehicle" items="${readVehicles}" varStatus ="status">
-
-
-</c:forEach>
-
 <div class="general-table">
 	<table border="1">
 		<tr>
