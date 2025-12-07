@@ -61,5 +61,32 @@ public class DriverDao {
 		return listofReqDrivers;
 	}
 	
+	public static List<DriverBean> getOwnersDrivers(int id) {
+		List<DriverBean> listofReqDrivers = new ArrayList<>();
+		if (con == null) {
+			getConnection();
+		}
+		try {
+			pst = con.prepareStatement("select * from drivers where driver_status = ? and owner_id = ?");
+			pst.setString(1, "Approved");
+			pst.setInt(2, id);
+			rs = pst.executeQuery();
+
+			while (rs.next()) {
+				DriverBean driverBeans = new DriverBean();
+				driverBeans.setDriverId(rs.getInt(1));
+				driverBeans.setOwnerId(rs.getInt(2));
+				driverBeans.setDriverName(rs.getString(3));
+				driverBeans.setDriverContact(rs.getString(4));
+				driverBeans.setDriverStatus(rs.getString(5));
+				listofReqDrivers.add(driverBeans);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return listofReqDrivers;
+	}
+	
 
 }

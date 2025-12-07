@@ -14,6 +14,7 @@ body {
 h2 {
   padding-left: 50px;
   margin: 30px;
+  text-align: center;
 }
 
 h1 {
@@ -155,7 +156,7 @@ nav .logo {
 
 /* Fixed Table Styles */
 .general-table {
-  width: 90%;
+   width: max-content;
   margin: 20px auto;
   overflow-x: auto; /* For responsive scrolling if needed */
 }

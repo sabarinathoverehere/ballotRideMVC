@@ -17,7 +17,8 @@ public class LocationDao {
 	public static Connection getConnection() {
 
 		DBDAO.connect();
-		return DBDAO.getDbCon();
+		con=DBDAO.getDbCon();
+		return con;
 
 	}
 
@@ -31,7 +32,7 @@ public class LocationDao {
 		try {
 			pst = con.prepareStatement("insert into locations(location_name) values (?)");
 			pst.setString(1, locationBean.getLocationName());
-			return pst.executeUpdate() > 1;
+			return pst.executeUpdate() > 0;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -46,11 +47,11 @@ public class LocationDao {
 		}
 		LocationBean locBean = new LocationBean();
 		try {
-			pst = con.prepareStatement("select * from location where location_id = ?");
+			pst = con.prepareStatement("select * from locations where location_id = ?");
 			pst.setInt(1, id);
-
+			rs=pst.executeQuery();
 			while (rs.next()) {
-				locBean.setLocationId(id);
+				locBean.setLocationId(rs.getInt("location_id"));
 				locBean.setLocationName(rs.getString("location_name"));
 			}
 		} catch (Exception e) {
@@ -83,6 +84,25 @@ public class LocationDao {
 
 		return locationBeans;
 
+	}
+	
+	//update 
+	public static boolean updateLocation(LocationBean locBean) {
+		if(con == null) {
+			getConnection();
+		}
+		try {
+			pst = con.prepareStatement("update locations set location_name = ?  where location_id = ?");
+			pst.setString(1,locBean.getLocationName());
+			pst.setInt(2, locBean.getLocationId());
+			
+			return pst.executeUpdate() > 0;
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return false;
 	}
 
 }

@@ -21,4 +21,5 @@ if (checkBean.getUserRole().equalsIgnoreCase("admin")) {
 }
 
 session.setAttribute("username", checkBean.getUserName());
+session.setAttribute("ownerId", checkBean.getUserId());
 %>

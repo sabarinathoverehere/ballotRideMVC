@@ -42,10 +42,18 @@
 					<ul class="dropdown-menu">
 						<li><a href="${pageContext.request.contextPath}/driverReqs">View Requests</a></li>
 					</ul></li>
-				<li class="dropdown"><a href="#">Daily Routes</a>
+				<li class="dropdown"><a href="${pageContext.request.contextPath}/showLocations">Location</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Add Route</a></li>
-						<li><a href="#">View Routes</a></li>
+						<li><a href="${pageContext.request.contextPath}/admin/adminLocationAdd.jsp">Add</a></li>
+						<li><a href="${pageContext.request.contextPath}/admin/adminLocationEdit.jsp">Edit</a></li>
+					
+					</ul>
+				</li>
+					
+				<li class="dropdown"><a href="${pageContext.request.contextPath}/showtenders">Tenders</a>
+					<ul class="dropdown-menu">
+						<li><a href="${pageContext.request.contextPath}/admin/adminAssignTenders.jsp">Assign Tenders</a></li>
+					
 					</ul></li>
 				<li><a href="#">Payments</a></li>
 				<li><a href="#">Logout</a></li>
