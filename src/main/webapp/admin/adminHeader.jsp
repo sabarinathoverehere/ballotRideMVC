@@ -53,6 +53,7 @@
 				<li class="dropdown"><a href="${pageContext.request.contextPath}/showtenders">Tenders</a>
 					<ul class="dropdown-menu">
 						<li><a href="${pageContext.request.contextPath}/admin/adminAssignTenders.jsp">Assign Tenders</a></li>
+						<li><a href="${pageContext.request.contextPath}/adminCurrentStatusTenders">History</a></li>
 					
 					</ul></li>
 				<li><a href="#">Payments</a></li>

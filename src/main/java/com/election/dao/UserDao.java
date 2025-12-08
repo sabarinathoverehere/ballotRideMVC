@@ -27,15 +27,16 @@ public class UserDao {
 			getConnection();
 		}
 		try {
-			pst = con.prepareStatement("SELECT user_name, user_role FROM users WHERE user_name=? AND user_password=?");
+			pst = con.prepareStatement("SELECT user_id,user_name, user_role FROM users WHERE user_name=? AND user_password=?");
 
 			pst.setString(1, userBean.getUserName());
 			pst.setString(2, userBean.getUserPassword());
 			rs = pst.executeQuery();
 
 			while (rs.next()) {
-				loginBean.setUserName(rs.getString(1));
-				loginBean.setUserRole(rs.getString(2));
+				loginBean.setUserId(rs.getInt(1));
+				loginBean.setUserName(rs.getString(2));
+				loginBean.setUserRole(rs.getString(3));
 			}
 
 		} catch (Exception e) {

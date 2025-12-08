@@ -11,6 +11,8 @@ UserBean userLogin = new UserBean();
 userLogin.setUserName(userName);
 userLogin.setUserPassword(password);
 UserBean checkBean = UserDao.checkLogin(userLogin);
+session.setAttribute("username", checkBean.getUserName());
+session.setAttribute("ownerId", checkBean.getUserId()-1);
 System.out.println(checkBean.getUserRole() + " "+checkBean.getUserName());
 if (checkBean.getUserRole().equalsIgnoreCase("admin")) {
 	response.sendRedirect("admin/adminHome.jsp");
@@ -20,6 +22,4 @@ if (checkBean.getUserRole().equalsIgnoreCase("admin")) {
 	response.sendRedirect("index.jsp");
 }
 
-session.setAttribute("username", checkBean.getUserName());
-session.setAttribute("ownerId", checkBean.getUserId());
 %>

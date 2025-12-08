@@ -34,6 +34,11 @@
 						<li><a href="${pageContext.request.contextPath}/driversViewOwner">View Drivers</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="${pageContext.request.contextPath}/viewOpenTenders">Tenders</a>
+					<ul class="dropdown-menu">
+						<li><a href="${pageContext.request.contextPath}/closeTenders">Close Tenders </a></li>
+						
+					</ul></li>
+				</li>
 				<li><a href="#">Payments</a></li>
 				<li><a href="#">Logout</a></li>
 			</ul>

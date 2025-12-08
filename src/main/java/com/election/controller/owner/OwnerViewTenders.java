@@ -23,15 +23,21 @@ public class OwnerViewTenders extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	        throws ServletException, IOException {
 		try {
-			List<TenderBean> opentenders = TenderDao.getOpenTenders();
-			request.setAttribute("opentenders", opentenders);
-			request.getRequestDispatcher("owner/ownerViewTenders.jsp").forward(request, response);
 			HttpSession session = request.getSession(false);
 			Integer oid = (Integer) session.getAttribute("ownerId");
 			int ownerId = oid;
+			System.out.println("ownerId :" + ownerId);
 			List<DriverBean> driversOwners = DriverDao.getOwnersDrivers(ownerId);
-			if(driversOwners == null) System.out.println("driver is not null");
+			if (driversOwners == null) {
+			    System.out.println("Driver list is NULL");
+			} else {
+			    System.out.println("Driver list size = " + driversOwners.size());
+			}
 			request.setAttribute("DriverList", driversOwners);
+			List<TenderBean> opentenders = TenderDao.getOpenTenders();
+			request.setAttribute("opentenders", opentenders);
+			request.getRequestDispatcher("owner/ownerViewTenders.jsp").forward(request, response);
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
