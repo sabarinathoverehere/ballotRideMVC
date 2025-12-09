@@ -22,7 +22,6 @@
 			<a href="#" class="logo">BallotRide</a>
 			<ul class="navlinks">
 				<li><a href="${pageContext.request.contextPath}/admin/adminHome.jsp">Home</a></li>
-				<li><a href="#">Vehicle</a></li>
 				<li class="dropdown"><a href="#">Settings</a>
 					<ul class="dropdown-menu">
 						<li><a href="${pageContext.request.contextPath}/userView">View Users</a></li>
@@ -56,8 +55,8 @@
 						<li><a href="${pageContext.request.contextPath}/adminCurrentStatusTenders">History</a></li>
 					
 					</ul></li>
-				<li><a href="#">Payments</a></li>
-				<li><a href="#">Logout</a></li>
+				<li><a href="${pageContext.request.contextPath}/payments">Payments</a></li>
+				<li><a href="${pageContext.request.contextPath}/adminlogout">Logout</a></li>
 			</ul>
 		</div>
 	</nav>

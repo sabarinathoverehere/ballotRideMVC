@@ -4,7 +4,7 @@
 <%@ include file="adminHeader.jsp" %>
 
 <div class="general-table">
-	<table border="1">
+	<table>
 		<tr>
 			<th>SLNO</th>
 			<th>USER-NAME</th>

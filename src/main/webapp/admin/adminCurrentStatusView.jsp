@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <div class="general-table">
-	<table border="1">
+	<table >
 		<tr>
 			<th>Tender ID</th>
 			<th>Owner ID</th>

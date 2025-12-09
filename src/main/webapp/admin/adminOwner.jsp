@@ -54,7 +54,7 @@ if (v.equals(0)) {
 	</form>
 </div>
 <div class="general-table">
-	<table border="1">
+	<table >
 		<tr>
 			<th>SLNO</th>
 			<th>USERID</th>

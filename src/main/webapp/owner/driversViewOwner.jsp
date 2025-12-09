@@ -11,7 +11,7 @@
 <body>
 
 	<div class="general-table">
-		<table border="1">
+		<table >
 			<tr>
 				<th>SLNO</th>
 				<th>OWNERID</th>
